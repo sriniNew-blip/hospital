@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
     isMobileMenuOpen = false;
-  
+  constructor(private router:Router){
+
+  }
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
@@ -30,4 +33,5 @@ export class HeaderComponent {
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
   }
+
 }

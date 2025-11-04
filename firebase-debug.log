@@ -1,0 +1,41 @@
+[debug] [2025-10-15T06:51:56.308Z] ----------------------------------------------------------------------
+[debug] [2025-10-15T06:51:56.311Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pachaiyappas\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login --no-localhost
+[debug] [2025-10-15T06:51:56.311Z] CLI Version:   14.19.1
+[debug] [2025-10-15T06:51:56.311Z] Platform:      win32
+[debug] [2025-10-15T06:51:56.311Z] Node Version:  v22.14.0
+[debug] [2025-10-15T06:51:56.311Z] Time:          Wed Oct 15 2025 12:21:56 GMT+0530 (India Standard Time)
+[debug] [2025-10-15T06:51:56.311Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-15T06:51:56.313Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[debug] [2025-10-15T06:51:57.024Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: self-signed certificate in certificate chain
+[warn] !  Unable to fetch the CLI MOTD and remote config. This is not a fatal error, but may indicate an issue with your network connection. 
+[debug] [2025-10-15T06:51:57.025Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+[debug] [2025-10-15T06:54:58.570Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\pachaiyappas\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:518:28)
+    at Interface.emit (node:domain:489:12)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1124:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:263:20)
+    at ReadStream.emit (node:events:530:35)
+    at ReadStream.emit (node:domain:489:12)
+    at emitKeys (node:internal/readline/utils:370:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-10-15T06:55:01.635Z] ----------------------------------------------------------------------
+[debug] [2025-10-15T06:55:01.638Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pachaiyappas\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login --no-localhost --debug
+[debug] [2025-10-15T06:55:01.638Z] CLI Version:   14.19.1
+[debug] [2025-10-15T06:55:01.638Z] Platform:      win32
+[debug] [2025-10-15T06:55:01.638Z] Node Version:  v22.14.0
+[debug] [2025-10-15T06:55:01.638Z] Time:          Wed Oct 15 2025 12:25:01 GMT+0530 (India Standard Time)
+[debug] [2025-10-15T06:55:01.638Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-15T06:55:01.640Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[info] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you. 
+[debug] [2025-10-15T06:55:02.448Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: self-signed certificate in certificate chain
+[warn] !  Unable to fetch the CLI MOTD and remote config. This is not a fatal error, but may indicate an issue with your network connection. 
+[debug] [2025-10-15T06:55:02.450Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json

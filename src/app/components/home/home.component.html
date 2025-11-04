@@ -1,0 +1,19 @@
+<section class="hero sec">
+  <!-- Decorative medical icons -->
+  <div class="medical-decoration plus-1">➕</div>
+  <div class="medical-decoration plus-2">➕</div>
+  <div class="medical-decoration heart">❤️</div>
+  
+  <div class="container">
+    <h1 class="title">Welcome to Our Hospital</h1>
+    <p class="subtitle">World-class healthcare for every stage of life</p>
+    <a routerLink="/departments" class="btn">Explore Departments</a>
+
+    <ng-image-slider 
+      [images]="imageData" 
+      [infinite]="true"
+      [autoSlide]="3" 
+      #nav>
+    </ng-image-slider>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<header class="header main-back font-white">
+  <div class="container header-content">
+    <div class="logo">
+      <img height="50" width="50" src="assets/logo-hp.jpeg" alt="Jeyam Hospital Logo">
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+      ☰
+    </button>
+    
+    <nav class="nav" [class.mobile-open]="isMobileMenuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      <a routerLink="/departments" routerLinkActive="active">Departments</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a target="_blank" href="https://script.google.com/macros/s/AKfycbzPKONbGwjpXm8F6WfDhylDpMti_mkeWlBoFrqxNhGld_rxONFHD6eP7aTkyoR5eWYL/exec">Contact us</a>
+    </nav>
+  </div>
+</header>

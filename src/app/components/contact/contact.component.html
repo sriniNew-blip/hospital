@@ -1,0 +1,17 @@
+<h2>Contact Us</h2>
+
+<form 
+  action="https://script.google.com/macros/s/AKfycbwqT1FZvZ2tBMELaErWItXgd_dUG4KXSICImQbsGQGZAY2Zx9zIMAeZck2PTc6QdeSk/exec"
+  method="POST"
+  target="hidden_iframe"
+  id="contactForm">
+
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="query" placeholder="Your Query" required></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<p>{{ submitMessage }}</p>

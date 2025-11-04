@@ -1,0 +1,281 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 1;
+  }
+
+  .container {
+    min-width: 100%;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease-out;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(45deg, #571159, #d2b0cd);
+    color: white;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+  }
+
+  // Image Slider Styles
+  ng-image-slider {
+    margin-top: 3rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out 0.6s both;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    ::ng-deep {
+      .main-container {
+        border-radius: 20px !important;
+        overflow: hidden !important;
+      }
+
+      .img {
+        border-radius: 15px !important;
+        transition: transform 0.3s ease !important;
+      }
+
+      .img:hover {
+        transform: scale(1.05) !important;
+      }
+
+      .arrow {
+        background: rgba(255, 255, 255, 0.9) !important;
+        border-radius: 50% !important;
+        width: 50px !important;
+        height: 50px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+        transition: all 0.3s ease !important;
+
+        &:hover {
+          background: white !important;
+          transform: scale(1.1) !important;
+        }
+
+        &.prev {
+          left: 20px !important;
+        }
+
+        &.next {
+          right: 20px !important;
+        }
+      }
+
+      .arrow i {
+        color: #333 !important;
+        font-size: 20px !important;
+      }
+
+      .indicators {
+        bottom: 20px !important;
+
+        .indicator {
+          background: rgba(255, 255, 255, 0.5) !important;
+          border: 2px solid white !important;
+          width: 12px !important;
+          height: 12px !important;
+
+          &.active {
+            background: white !important;
+            transform: scale(1.2) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .hero {
+    min-height: 90vh;
+    padding: 1rem;
+
+    .container {
+      padding: 1rem;
+    }
+
+    ng-image-slider {
+      margin-top: 2rem;
+      
+      ::ng-deep {
+        .arrow {
+          width: 40px !important;
+          height: 40px !important;
+          
+          &.prev {
+            left: 10px !important;
+          }
+          
+          &.next {
+            right: 10px !important;
+          }
+        }
+        
+        .arrow i {
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 80vh;
+
+    ng-image-slider {
+      margin-top: 1.5rem;
+      border-radius: 15px;
+      
+      ::ng-deep {
+        .indicators {
+          bottom: 15px !important;
+          
+          .indicator {
+            width: 10px !important;
+            height: 10px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Optional: Add some medical-themed decorative elements
+.medical-decoration {
+  position: absolute;
+  z-index: 1;
+  
+  &.plus-1 {
+    top: 20%;
+    left: 10%;
+    font-size: 2rem;
+    color: rgba(136, 14, 14, 0.1);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  &.plus-2 {
+    bottom: 30%;
+    right: 15%;
+    font-size: 1.5rem;
+    color: rgba(136, 14, 14, 0.3);
+    animation: float 8s ease-in-out infinite 1s;
+  }
+  
+  &.heart {
+    top: 15%;
+    right: 10%;
+    font-size: 1.8rem;
+    color: rgba(136, 14, 14, 0.3);
+    animation: float 7s ease-in-out infinite 0.5s;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}

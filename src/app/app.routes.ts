@@ -7,6 +7,8 @@ import { DoctorComponent } from './components/doctor/doctor.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+
   { path: 'departments', component: DepartmentsComponent },
    { path: 'about', component: AboutComponent },
    { path: 'contact', component: ContactComponent },

@@ -5,6 +5,7 @@
     "/contact",
     "/departments",
     "/doctors",
-    "/home"
+    "/home",
+    "/hospital/home"
   ]
 }

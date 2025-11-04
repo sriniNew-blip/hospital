@@ -10,10 +10,10 @@
     </button>
 
     <nav class="nav" [class.mobile-open]="isMobileMenuOpen">
-      <a routerLink="/hospital" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
-      <a routerLink="/departments" routerLinkActive="active">Departments</a>
-      <a routerLink="/about" routerLinkActive="active">About</a>
-      <a routerLink="/doctors" routerLinkActive="active">Doctors</a>
+      <a routerLink="/hospital" routerLinkActive="active" (click)="toggleMobileMenu()" [routerLinkActiveOptions]="{exact:true}">Home</a>
+      <a routerLink="/departments" routerLinkActive="active" (click)="toggleMobileMenu()">Departments</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="toggleMobileMenu()">About</a>
+      <a routerLink="/doctors" routerLinkActive="active" (click)="toggleMobileMenu()">Doctors</a>
 
 
       <a target="_blank" href="https://script.google.com/macros/s/AKfycbxqC2Ag8r0nlwm2xbMzujUgP8v4OwGAtptBerZfjhOJzWOHs7KkABziN16TXES0T0Nu/exec">Contact us</a>

@@ -46,7 +46,7 @@ export class HomeComponent {
     thumbImage: 'assets/27.jpg',
     title: ''
   },
-,{
+{
     image: 'assets/28.jpg',
     thumbImage: 'assets/28.jpg',
     title: ''

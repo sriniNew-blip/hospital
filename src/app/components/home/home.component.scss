@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -29,10 +29,10 @@
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 40px;
     font-weight: 700;
     color: var(--main-color);
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 0.8s ease-out;
 
@@ -46,8 +46,8 @@
   }
 
   .subtitle {
-    font-size: 1.5rem;
-    color: var(--main-color);
+    font-size: 20px;
+    color: #880e0e;
     margin-bottom: 2.5rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 0.8s ease-out 0.2s both;
@@ -196,21 +196,21 @@
 
     ng-image-slider {
       margin-top: 2rem;
-      
+
       ::ng-deep {
         .arrow {
           width: 40px !important;
           height: 40px !important;
-          
+
           &.prev {
             left: 10px !important;
           }
-          
+
           &.next {
             right: 10px !important;
           }
         }
-        
+
         .arrow i {
           font-size: 16px !important;
         }
@@ -226,11 +226,11 @@
     ng-image-slider {
       margin-top: 1.5rem;
       border-radius: 15px;
-      
+
       ::ng-deep {
         .indicators {
           bottom: 15px !important;
-          
+
           .indicator {
             width: 10px !important;
             height: 10px !important;
@@ -245,7 +245,7 @@
 .medical-decoration {
   position: absolute;
   z-index: 1;
-  
+
   &.plus-1 {
     top: 20%;
     left: 10%;
@@ -253,7 +253,7 @@
     color: rgba(136, 14, 14, 0.1);
     animation: float 6s ease-in-out infinite;
   }
-  
+
   &.plus-2 {
     bottom: 30%;
     right: 15%;
@@ -261,7 +261,7 @@
     color: rgba(136, 14, 14, 0.3);
     animation: float 8s ease-in-out infinite 1s;
   }
-  
+
   &.heart {
     top: 15%;
     right: 10%;
@@ -277,5 +277,87 @@
   }
   50% {
     transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+
+.quote {
+  font-style: italic;
+  font-weight: 500;
+  color: #6d1b1b;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  background: rgba(255, 240, 240, 0.6);
+  border-left: 4px solid #b71c1c;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #880e0e;
+}
+
+.address-block {
+  background: #fff5f5;
+  border-radius: 12px;
+  padding: 15px 25px;
+  display: inline-block;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(136, 14, 14, 0.1);
+  animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.address-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #880e0e;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.address-block a {
+  color: #571159;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.address-block a:hover {
+  text-decoration: underline;
+}
+.floating-heart {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1.5rem;
+  color: #d32f2f;
+  animation: floatHeart 2.5s ease-in-out infinite;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+}
+
+@keyframes floatHeart {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+    opacity: 0.9;
+  }
+}
+
+@keyframes floatHeart {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-6px) scale(1.1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+  }
+  75% {
+    transform: translateY(-6px) scale(1.1);
   }
 }

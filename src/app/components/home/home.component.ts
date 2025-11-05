@@ -16,39 +16,6 @@ export class HomeComponent {
 
 
  imageData:any = [
-{
-    image: 'assets/22.jpg',
-    thumbImage: 'assets/22.jpg',
-    title: ''
-  },
-  {
-    image: 'assets/23.jpg',
-    thumbImage: 'assets/23.jpg',
-    title: ''
-  },{
-    image: 'assets/24.jpg',
-    thumbImage: 'assets/24.jpg',
-    title: ''
-  },{
-    image: 'assets/25.jpg',
-    thumbImage: 'assets/25.jpg',
-    title: ''
-  },{
-    image: 'assets/26.jpg',
-    thumbImage: 'assets/26.jpg',
-    title: ''
-  },{
-    image: 'assets/27.jpg',
-    thumbImage: 'assets/27.jpg',
-    title: ''
-  },
-{
-    image: 'assets/28.jpg',
-    thumbImage: 'assets/28.jpg',
-    title: ''
-  },
-
-
   {
     image: 'assets/01.jpg',
     thumbImage: 'assets/01.jpg',
@@ -155,7 +122,38 @@ export class HomeComponent {
     image: 'assets/21.jpg',
     thumbImage: 'assets/21.jpg',
     title: ''
-  }
+  },
+  {
+    image: 'assets/22.jpg',
+    thumbImage: 'assets/22.jpg',
+    title: ''
+  },
+  {
+    image: 'assets/23.jpg',
+    thumbImage: 'assets/23.jpg',
+    title: ''
+  },{
+    image: 'assets/24.jpg',
+    thumbImage: 'assets/24.jpg',
+    title: ''
+  },{
+    image: 'assets/25.jpg',
+    thumbImage: 'assets/25.jpg',
+    title: ''
+  },{
+    image: 'assets/26.jpg',
+    thumbImage: 'assets/26.jpg',
+    title: ''
+  },{
+    image: 'assets/27.jpg',
+    thumbImage: 'assets/27.jpg',
+    title: ''
+  },
+{
+    image: 'assets/28.jpg',
+    thumbImage: 'assets/28.jpg',
+    title: ''
+  },
 ];
   constructor() {
 

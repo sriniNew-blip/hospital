@@ -27,7 +27,8 @@
     text-align: center;
     // padding: 2rem;
     max-width: 1200px;
-    max-height: calc(100vh - 180px);
+    max-height: calc(100vh - 15px);
+    overflow: auto;
     margin: 0 auto;
   }
 
@@ -195,6 +196,8 @@
 
     .container {
       padding: 1rem;
+      overflow: auto;
+    max-height: calc(100vh - 130px);
     }
 
     ng-image-slider {

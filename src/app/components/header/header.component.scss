@@ -52,7 +52,7 @@
     @media (max-width: 768px) {
       display: none;
       gap: 0;
-      
+
       &.mobile-open {
         display: flex;
         flex-direction: column;
@@ -65,7 +65,7 @@
         box-shadow: 0 10px 30px rgba(136, 14, 14, 0.2);
         border-top: 1px solid #880e0e;
         border-bottom: 2px solid #880e0e;
-        
+
         a {
           width: 100%;
           text-align: center;
@@ -104,7 +104,7 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(136, 14, 14, 0.1), transparent);
+        background: #fff;
         transition: left 0.5s ease;
       }
 
@@ -149,7 +149,7 @@
     &[href*="script.google.com"] {
   background: linear-gradient(135deg, #f57c00 0%, #e65100 100%);
   box-shadow: 0 4px 15px rgba(245, 124, 0, 0.4);
-  
+
   &:hover {
     background: linear-gradient(135deg, #e65100 0%, #f57c00 100%);
     box-shadow: 0 6px 20px rgba(245, 124, 0, 0.6);

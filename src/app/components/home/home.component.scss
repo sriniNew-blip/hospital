@@ -1,11 +1,13 @@
 .hero {
   position: relative;
-  min-height: 100vh;
-  background:#fff;
+  min-height: calc(100vh - 140px); /* adjust for header + footer height */
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: auto; /* allow scroll if needed */
+  padding-top: 80px; /* prevents top content being hidden by header */
+  padding-bottom: 80px; /* prevents bottom content hiding behind footer */
 
   &::before {
     content: '';
@@ -187,8 +189,10 @@
 // Responsive Design
 @media (max-width: 768px) {
   .hero {
-    min-height: 90vh;
-    padding: 1rem;
+
+    min-height: calc(100vh - 180px);
+    padding-top: 90px;
+    padding-bottom: 90px;
 
     .container {
       padding: 1rem;

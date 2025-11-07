@@ -20,7 +20,7 @@ constructor(private sanitizer: DomSanitizer){
 }
   ngOnInit() {
     this.loading=true;
-    const url = 'https://script.google.com/macros/s/AKfycbxZ88dIRZ2IROvyIixsZif_N8sgw0KSW4eyV1p8THMIKZnZ0KynzHEHsGWvxPgTMcM7/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbzPLQ-Tfhg5n7FT5kar8Nn5NtopuyXp_JWxC_PU22Zm9ylLwICVEsNwv0ovU8-F6daY/exec';
     this.screen = this.sanitizer.bypassSecurityTrustResourceUrl(url);
 
 

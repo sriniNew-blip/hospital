@@ -22,7 +22,7 @@ constructor(private sanitizer: DomSanitizer){
 }
   ngOnInit() {
     this.loading=true;
-    const url = 'https://script.google.com/macros/s/AKfycbz7i4veysk94Bmi5qxO9jCfKP1BWYB67NQQrdM0FOFBAsIOZO_ZcHvWvvztAoogefiq/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbyeAxgx4UouvWD6ZgIFT07meYo_UomtOShaO8Kesw2wXqWpeUaKorighzampZwqN13E/exec';
     this.screen = this.sanitizer.bypassSecurityTrustResourceUrl(url);
 
 

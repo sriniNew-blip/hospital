@@ -428,7 +428,9 @@ ng-image-slider {
 ::ng-deep .ng-image-slider .ng-image-slider-container .main {
   height: 100% !important;
 }
-
+::ng-deep ng-image-slider{
+  box-shadow: none !important;
+}
 /* Tablet: adjust height for mid-size screens */
 @media (max-width: 1024px) and (min-width: 768px) {
   ::ng-deep .ng-image-slider {
@@ -439,7 +441,7 @@ ng-image-slider {
 /* Mobile: adjust height for small screens */
 @media (max-width: 767px) {
   ::ng-deep .ng-image-slider {
-    height: 130px !important;
+    height: 200px !important;
   }
 }
 

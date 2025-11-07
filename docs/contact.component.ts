@@ -1,15 +1,17 @@
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { timer } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-appointment',
+  selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './appointment.component.html',
-  styleUrl: './appointment.component.scss'
+  imports: [CommonModule, FormsModule],
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
 })
-export class AppointmentComponent {
+export class ContactComponent {
  loading = true;
   screenURL: any;
   screen: any;
@@ -20,11 +22,12 @@ constructor(private sanitizer: DomSanitizer){
 }
   ngOnInit() {
     this.loading=true;
-    const url = 'https://script.google.com/macros/s/AKfycbxvoh70cz65WzD9qban-L3X4CnksSZB3KetCvfq0ZgtxMCFqlJoEnqlJPLcOP2BBBnm/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbyeDN8brUJIJUeEPe85gnlUTVOH6eIe1yr-OoEfeW5LFyr4RwgTATwAKrus1kA-P2sx/exec';
     this.screen = this.sanitizer.bypassSecurityTrustResourceUrl(url);
 
 
   }
+
   onLoaded(event: any) {
     console.log('Iframe loaded ✅', event);
     this.loading = false;

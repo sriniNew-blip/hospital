@@ -6,7 +6,7 @@
 
   <div class="container">
     <h3 class="title" style="color:#880e0e">Welcome to our Jeyam Hospital</h3>
-    <p class="subtitle">World-class healthcare for every stage of life</p>
+    <!-- <p class="subtitle">World-class healthcare for every stage of life</p> -->
    <p class="subtitle quote">
   “Inspiring Health, Shining with Hope — guided by Faith, powered by Love.”
   <span class="floating-heart">❤️</span>
@@ -19,10 +19,14 @@
 </p>
     <a routerLink="/departments" class="btn">Explore Departments</a>
 
+
+
+
     <ng-image-slider
       [images]="imageData"
       [infinite]="true"
       [autoSlide]="3"
+  [imageSize]="{width: '100%', height: 'auto'}"
       #nav>
     </ng-image-slider>
 

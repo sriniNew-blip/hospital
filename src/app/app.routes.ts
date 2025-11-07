@@ -4,6 +4,7 @@ import { DepartmentsComponent } from './components/departments/departments.compo
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DoctorComponent } from './components/doctor/doctor.component';
+import { AppointmentComponent } from './components/appointment/appointment.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +15,8 @@ export const routes: Routes = [
    { path: 'about', component: AboutComponent },
    { path: 'contact', component: ContactComponent },
    { path: 'doctors', component: DoctorComponent },
+   { path: 'appointment', component: AppointmentComponent },
+
 
 
   { path: '**', redirectTo: '' }

@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { timer } from 'rxjs';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -10,28 +12,25 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-
  loading = true;
-  @ViewChild('iframeRef') iframeRef!: ElementRef<HTMLIFrameElement>;
+  screenURL: any;
+  screen: any;
+   private iframeLoadFallback: any;
 
-  // ngAfterViewInit() {
-  //   // Fallback method: wait for iframe to load completely
-  //   const iframe = this.iframeRef.nativeElement;
+constructor(private sanitizer: DomSanitizer){
 
-  //   // Try load event first
-  //   iframe.onload = () => {
-  //     this.hideLoader();
-  //   };
+}
+  ngOnInit() {
+    this.loading=true;
+    const url = 'https://script.google.com/macros/s/AKfycbz7i4veysk94Bmi5qxO9jCfKP1BWYB67NQQrdM0FOFBAsIOZO_ZcHvWvvztAoogefiq/exec';
+    this.screen = this.sanitizer.bypassSecurityTrustResourceUrl(url);
 
-  //   // Fallback if load event not triggered (Google iframe case)
-  //   setTimeout(() => {
-  //     this.hideLoader();
-  //   }, 4000); // Force hide after 4s even if not triggered
-  // }
 
-  // hideLoader() {
-  //   if (this.loading) {
-  //     this.loading = false;
-  //   }
-  // }
+  }
+
+  onLoaded(event: any) {
+    console.log('Iframe loaded ✅', event);
+    this.loading = false;
+    clearTimeout(this.iframeLoadFallback);
+  }
 }

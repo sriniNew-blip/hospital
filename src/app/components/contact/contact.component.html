@@ -1,11 +1,11 @@
-
-
-
-  <iframe
-    #iframeRef
-    width="100%"
-    height="1000"
-    style="border:none;"
-    src="https://script.google.com/macros/s/AKfycbz7i4veysk94Bmi5qxO9jCfKP1BWYB67NQQrdM0FOFBAsIOZO_ZcHvWvvztAoogefiq/exec">
-  </iframe>
-
+<div class="loader-overlay" *ngIf="loading">
+  <div class="spinner"></div>
+</div>
+<iframe
+  #iframeRef
+  width="100%"
+  height="1000"
+  style="border:none;"
+  [src]="screen"
+  (load)="onLoaded($event)">
+</iframe>

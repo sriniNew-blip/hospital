@@ -27,7 +27,7 @@
     text-align: center;
     // padding: 2rem;
     max-width: 1200px;
-    // max-height: calc(100vh - 15px);
+    max-height: calc(100vh - 15px);
     overflow: auto;
     margin: 0 auto;
   }
@@ -199,7 +199,7 @@
     .container {
       padding: 1rem;
       overflow: auto;
-    // max-height: calc(100vh - 130px);
+    max-height: calc(100vh - 130px);
     }
 
     ng-image-slider {
@@ -418,3 +418,28 @@ ng-image-slider {
     }
   }
 }
+
+/* Default desktop height */
+::ng-deep .ng-image-slider {
+  height: 536px !important;
+}
+
+/* For the main container inside slider */
+::ng-deep .ng-image-slider .ng-image-slider-container .main {
+  height: 100% !important;
+}
+
+/* Tablet: adjust height for mid-size screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+  ::ng-deep .ng-image-slider {
+    height: 480px !important;
+  }
+}
+
+/* Mobile: adjust height for small screens */
+@media (max-width: 767px) {
+  ::ng-deep .ng-image-slider {
+    height: 130px !important;
+  }
+}
+
